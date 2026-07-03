@@ -1,0 +1,59 @@
+{
+  "ts": 1781571807781,
+  "summary": {
+    "critical": 0,
+    "warn": 5,
+    "info": 2
+  },
+  "findings": [
+    {
+      "checkId": "summary.attack_surface",
+      "severity": "info",
+      "title": "Attack surface summary",
+      "detail": "groups: open=0, allowlist=1\ntools.elevated: disabled\nhooks.webhooks: disabled\nhooks.internal: disabled\nbrowser control: enabled\ntrust model: personal assistant (one trusted operator boundary), not hostile multi-tenant on one shared gateway"
+    },
+    {
+      "checkId": "gateway.trusted_proxies_missing",
+      "severity": "warn",
+      "title": "Reverse proxy headers are not trusted",
+      "detail": "gateway.bind is loopback and gateway.trustedProxies is empty. If you expose the Control UI through a reverse proxy, configure trusted proxies so local-client checks cannot be spoofed.",
+      "remediation": "Set gateway.trustedProxies to your proxy IPs or keep the Control UI local-only."
+    },
+    {
+      "checkId": "tools.exec.fs_tools_disabled_but_exec_enabled",
+      "severity": "warn",
+      "title": "Filesystem tool policy does not make exec read-only",
+      "detail": "Found scopes where write/edit/apply_patch are unavailable but exec remains available:\n- agents.list.robocop.tools: runtime=[exec], disabledFs=[write, edit, apply_patch], exec.host=auto, sandbox=off, workspaceAccess=none\nThe exec tool is a shell and can still write files wherever the selected host or sandbox filesystem permits it.",
+      "remediation": "For read-only agents, deny exec and process too. If shell access is intentional, constrain the filesystem boundary with sandbox mode \"all\" and workspaceAccess \"ro\" or \"none\"."
+    },
+    {
+      "checkId": "models.small_params",
+      "severity": "info",
+      "title": "Small models require sandboxing and web tools disabled",
+      "detail": "Small models (<=300B params) detected:\n- nvidia/llama-nemotron-rerank-vl-1b-v2:free (1B) @ agents.defaults.model.fallbacks (ok; sandbox=off; web=[off])\n- google/gemma-4-31b-it:free (31B) @ agents.defaults.model.fallbacks (ok; sandbox=off; web=[off])\n- nvidia/llama-nemotron-rerank-vl-1b-v2:free (1B) @ agents.list.main.model.fallbacks (ok; sandbox=off; web=[off])\n- google/gemma-4-31b-it:free (31B) @ agents.list.main.model.fallbacks (ok; sandbox=off; web=[off])\n- nvidia/llama-nemotron-rerank-vl-1b-v2:free (1B) @ agents.list.airdrop.model.fallbacks (ok; sandbox=off; web=[off])\n- google/gemma-4-31b-it:free (31B) @ agents.list.airdrop.model.fallbacks (ok; sandbox=off; web=[off])\n- nvidia/llama-nemotron-rerank-vl-1b-v2:free (1B) @ agents.list.trading.model.fallbacks (ok; sandbox=off; web=[off])\n- google/gemma-4-31b-it:free (31B) @ agents.list.trading.model.fallbacks (ok; sandbox=off; web=[off])\n- nvidia/llama-nemotron-rerank-vl-1b-v2:free (1B) @ agents.list.farmer.model.fallbacks (ok; sandbox=off; web=[off])\n- google/gemma-4-31b-it:free (31B) @ agents.list.farmer.model.fallbacks (ok; sandbox=off; web=[off])\n- nvidia/llama-nemotron-rerank-vl-1b-v2:free (1B) @ agents.list.polyclaw.model.fallbacks (ok; sandbox=off; web=[off])\n- google/gemma-4-31b-it:free (31B) @ agents.list.polyclaw.model.fallbacks (ok; sandbox=off; web=[off])\n- nvidia/llama-nemotron-rerank-vl-1b-v2:free (1B) @ agents.list.wp-claw.model.fallbacks (ok; sandbox=off; web=[off])\n- google/gemma-4-31b-it:free (31B) @ agents.list.wp-claw.model.fallbacks (ok; sandbox=off; web=[off])\n- nvidia/llama-nemotron-rerank-vl-1b-v2:free (1B) @ agents.list.pfa.model.fallbacks (ok; sandbox=off; web=[off])\n- google/gemma-4-31b-it:free (31B) @ agents.list.pfa.model.fallbacks (ok; sandbox=off; web=[off])\n- nvidia/llama-nemotron-rerank-vl-1b-v2:free (1B) @ agents.list.robocop.model.fallbacks (ok; sandbox=off; web=[off])\n- google/gemma-4-31b-it:free (31B) @ agents.list.robocop.model.fallbacks (ok; sandbox=off; web=[off])\nNo web/browser tools detected for these models.\nSmall models are not recommended for untrusted inputs.",
+      "remediation": "If you must use small models, disable web_search/web_fetch/browser globally or for each small model with tools.byProvider[\"provider/model\"].deny=[\"group:web\",\"browser\"]; use agents.defaults.sandbox.mode=\"all\" for defense in depth."
+    },
+    {
+      "checkId": "security.trust_model.multi_user_heuristic",
+      "severity": "warn",
+      "title": "Potential multi-user setup detected (personal-assistant model warning)",
+      "detail": "Heuristic signals indicate this gateway may be reachable by multiple users:\n- channels.telegram.groupPolicy=\"allowlist\" with configured group targets\nRuntime/process tools are exposed without full sandboxing in at least one context.\nPotential high-impact tool exposure contexts:\n- agents.defaults (sandbox=off; runtime=[exec, process]; fs=[read, write, edit, apply_patch]; fs.workspaceOnly=true)\n- agents.list.main (sandbox=off; runtime=[exec, process]; fs=[read, write, edit, apply_patch]; fs.workspaceOnly=true)\n- agents.list.airdrop (sandbox=off; runtime=[exec, process]; fs=[read, write, edit, apply_patch]; fs.workspaceOnly=true)\n- agents.list.trading (sandbox=off; runtime=[exec, process]; fs=[read, write, edit, apply_patch]; fs.workspaceOnly=true)\n- agents.list.farmer (sandbox=off; runtime=[exec, process]; fs=[read, write, edit, apply_patch]; fs.workspaceOnly=true)\n- agents.list.polyclaw (sandbox=off; runtime=[exec, process]; fs=[read, write, edit, apply_patch]; fs.workspaceOnly=true)\n- agents.list.wp-claw (sandbox=off; runtime=[exec, process]; fs=[read, write, edit, apply_patch]; fs.workspaceOnly=true)\n- agents.list.pfa (sandbox=off; runtime=[exec, process]; fs=[read, write, edit, apply_patch]; fs.workspaceOnly=true)\n- agents.list.robocop (sandbox=off; runtime=[exec]; fs=[read]; fs.workspaceOnly=true)\nOpenClaw's default security model is personal-assistant (one trusted operator boundary), not hostile multi-tenant isolation on one shared gateway.",
+      "remediation": "If users may be mutually untrusted, split trust boundaries (separate gateways + credentials, ideally separate OS users/hosts). If you intentionally run shared-user access, set agents.defaults.sandbox.mode=\"all\", keep tools.fs.workspaceOnly=true, deny runtime/fs/web tools unless required, and keep personal/private identities + credentials off that runtime."
+    },
+    {
+      "checkId": "plugins.extensions_no_allowlist",
+      "severity": "warn",
+      "title": "Extensions exist but plugins.allow is not set",
+      "detail": "Found 1 extension(s) under /root/.openclaw/extensions. Without plugins.allow, any discovered plugin id may load (depending on config and plugin behavior).",
+      "remediation": "Set plugins.allow to an explicit list of plugin ids you trust."
+    },
+    {
+      "checkId": "plugins.tools_reachable_permissive_policy",
+      "severity": "warn",
+      "title": "Extension plugin tools may be reachable under permissive tool policy",
+      "detail": "Enabled extension plugins: graph-memory.\nPermissive tool policy contexts:\n- default\n- agents.list.main\n- agents.list.airdrop\n- agents.list.trading\n- agents.list.farmer\n- agents.list.polyclaw\n- agents.list.wp-claw\n- agents.list.pfa",
+      "remediation": "Use restrictive profiles (`minimal`/`coding`) or explicit tool allowlists that exclude plugin tools for agents handling untrusted input."
+    }
+  ],
+  "secretDiagnostics": []
+}

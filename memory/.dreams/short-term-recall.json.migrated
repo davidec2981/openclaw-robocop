@@ -1,0 +1,218 @@
+{
+  "version": 1,
+  "updatedAt": "2026-06-13T12:03:18.936Z",
+  "entries": {
+    "memory:memory/.dreams/session-corpus/2026-06-13.txt:1:1": {
+      "key": "memory:memory/.dreams/session-corpus/2026-06-13.txt:1:1",
+      "path": "memory/.dreams/session-corpus/2026-06-13.txt",
+      "startLine": 1,
+      "endLine": 1,
+      "source": "memory",
+      "snippet": "Assistant: 📊 **OpenClaw Sicurezza - Audit Completato** 📊 *Data/Tempo (UTC): 2026-06-13 10:15* --- ### 🔍 **Risultati Audit** **Critico**: 0 **Avvertenze**: 6 **Info**: 1 --- ### ⚠️ **Avvertenze Principali** 1. **⚠️ Gateway non protetto da reverse proxy** - `gateway.trustedProxi",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-06-13T12:03:18.936Z",
+      "lastRecalledAt": "2026-06-13T12:03:18.936Z",
+      "queryHashes": [
+        "d387904341e2"
+      ],
+      "recallDays": [
+        "2026-06-13"
+      ],
+      "conceptTags": [
+        "gateway",
+        "data/tempo",
+        "gateway.trustedproxi",
+        "openclaw",
+        "sicurezza",
+        "audit",
+        "completato",
+        "data"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-06-13.txt:2:2": {
+      "key": "memory:memory/.dreams/session-corpus/2026-06-13.txt:2:2",
+      "path": "memory/.dreams/session-corpus/2026-06-13.txt",
+      "startLine": 2,
+      "endLine": 2,
+      "source": "memory",
+      "snippet": "Assistant: FS a `workspaceOnly=true` 4. **📁 auth-profiles.json leggibile** - File sensibile con token: `/root/.openclaw/agents/robocop/agent/auth-profiles.json` in permessi 644 - *Risoluzione:* - Corretti permessi: `chmod 600 auth-profiles.json` 5. **🔌 Plugin non specificati**",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-06-13T12:03:18.936Z",
+      "lastRecalledAt": "2026-06-13T12:03:18.936Z",
+      "queryHashes": [
+        "d387904341e2"
+      ],
+      "recallDays": [
+        "2026-06-13"
+      ],
+      "conceptTags": [
+        "auth-profiles.json",
+        "workspaceonly",
+        "true",
+        "auth",
+        "profiles.json",
+        "leggibile",
+        "sensibile",
+        "token"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-06-13.txt:3:3": {
+      "key": "memory:memory/.dreams/session-corpus/2026-06-13.txt:3:3",
+      "path": "memory/.dreams/session-corpus/2026-06-13.txt",
+      "startLine": 3,
+      "endLine": 3,
+      "source": "memory",
+      "snippet": "Assistant: partial) --- ### 🛠️ **Raccomandazioni Finali** 1. **ABILITA ISOLAZIONE SOOTHPRIVI** su Robocop: ```bash exec openclaw config agent.robocop workspaceAccess=\"none\" fsWorkspaceAccess=\"ro\" tools.runtime=[\"read\"] ``` 2. **AGGIORNA POLICY PLUGINS** con: ```bash openclaw con",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-06-13T12:03:18.936Z",
+      "lastRecalledAt": "2026-06-13T12:03:18.936Z",
+      "queryHashes": [
+        "d387904341e2"
+      ],
+      "recallDays": [
+        "2026-06-13"
+      ],
+      "conceptTags": [
+        "agent.robocop",
+        "tools.runtime",
+        "partial",
+        "raccomandazioni",
+        "finali",
+        "abilita",
+        "isolazione",
+        "soothprivi"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-06-13.txt:4:4": {
+      "key": "memory:memory/.dreams/session-corpus/2026-06-13.txt:4:4",
+      "path": "memory/.dreams/session-corpus/2026-06-13.txt",
+      "startLine": 4,
+      "endLine": 4,
+      "source": "memory",
+      "snippet": "Assistant: Provider returned error",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-06-13T12:03:18.936Z",
+      "lastRecalledAt": "2026-06-13T12:03:18.936Z",
+      "queryHashes": [
+        "d387904341e2"
+      ],
+      "recallDays": [
+        "2026-06-13"
+      ],
+      "conceptTags": [
+        "provider",
+        "returned",
+        "error"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-06-13.txt:5:5": {
+      "key": "memory:memory/.dreams/session-corpus/2026-06-13.txt:5:5",
+      "path": "memory/.dreams/session-corpus/2026-06-13.txt",
+      "startLine": 5,
+      "endLine": 5,
+      "source": "memory",
+      "snippet": "Assistant: 📊 **OpenClaw Sicurezza - Audit Completato** 📊 *Data/Tempo (UTC): 2026-06-13 10:15* --- ### 🔍 **Risultati Audit** **Critico**: 0 **Avvertenze**: 6 **Info**: 1 --- ### ⚠️ **Avvertenze Principali** 1. **⚠️ Gateway non protetto da reverse proxy** - `gateway.trustedProxi",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-06-13T12:03:18.936Z",
+      "lastRecalledAt": "2026-06-13T12:03:18.936Z",
+      "queryHashes": [
+        "d387904341e2"
+      ],
+      "recallDays": [
+        "2026-06-13"
+      ],
+      "conceptTags": [
+        "gateway",
+        "data/tempo",
+        "gateway.trustedproxi",
+        "openclaw",
+        "sicurezza",
+        "audit",
+        "completato",
+        "data"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-06-13.txt:6:6": {
+      "key": "memory:memory/.dreams/session-corpus/2026-06-13.txt:6:6",
+      "path": "memory/.dreams/session-corpus/2026-06-13.txt",
+      "startLine": 6,
+      "endLine": 6,
+      "source": "memory",
+      "snippet": "Assistant: FS a `workspaceOnly=true` 4. **📁 auth-profiles.json leggibile** - File sensibile con token: `/root/.openclaw/agents/robocop/agent/auth-profiles.json` in permessi 644 - *Risoluzione:* - Corretti permessi: `chmod 600 auth-profiles.json` 5. **🔌 Plugin non specificati**",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-06-13T12:03:18.936Z",
+      "lastRecalledAt": "2026-06-13T12:03:18.936Z",
+      "queryHashes": [
+        "d387904341e2"
+      ],
+      "recallDays": [
+        "2026-06-13"
+      ],
+      "conceptTags": [
+        "auth-profiles.json",
+        "workspaceonly",
+        "true",
+        "auth",
+        "profiles.json",
+        "leggibile",
+        "sensibile",
+        "token"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-06-13.txt:7:7": {
+      "key": "memory:memory/.dreams/session-corpus/2026-06-13.txt:7:7",
+      "path": "memory/.dreams/session-corpus/2026-06-13.txt",
+      "startLine": 7,
+      "endLine": 7,
+      "source": "memory",
+      "snippet": "Assistant: partial) --- ### 🛠️ **Raccomandazioni Finali** 1. **ABILITA ISOLAZIONE SOOTHPRIVI** su Robocop: ```bash exec openclaw config agent.robocop workspaceAccess=\"none\" fsWorkspaceAccess=\"ro\" tools.runtime=[\"read\"] ``` 2. **AGGIORNA POLICY PLUGINS** con: ```bash openclaw con",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-06-13T12:03:18.936Z",
+      "lastRecalledAt": "2026-06-13T12:03:18.936Z",
+      "queryHashes": [
+        "d387904341e2"
+      ],
+      "recallDays": [
+        "2026-06-13"
+      ],
+      "conceptTags": [
+        "agent.robocop",
+        "tools.runtime",
+        "partial",
+        "raccomandazioni",
+        "finali",
+        "abilita",
+        "isolazione",
+        "soothprivi"
+      ]
+    }
+  }
+}

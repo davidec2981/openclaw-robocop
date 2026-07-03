@@ -1,0 +1,17 @@
+{
+  "version": 3,
+  "files": {},
+  "seenMessages": {
+    "robocop:bda3d696-0c40-427c-bef5-be0261371def": [
+      "1219ce392f74042c4c3dbc293416e0fed280b83b",
+      "6d8eb6f554e20d3e0fdfc3f5923eb2f95863d55d",
+      "41e4388902a6e4ff38a52570e425b603e5237afe"
+    ],
+    "robocop:f2cdb44d-9feb-41d6-a8fa-5064671e14c5": [
+      "9d776a10ab3fb918b368df77a5d709a5635f0b2b",
+      "f38bd28ad94f93cbe034ff6879c499e761b3c108",
+      "5d319b9e606251399adef1ba0adaea2f46a862d2",
+      "0cb9bb644db54b63cde3da4fbb26f032588cd013"
+    ]
+  }
+}

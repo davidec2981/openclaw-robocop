@@ -119,3 +119,9 @@ This afternoon the security audit landed like a thunderbolt on a clear day. Zero
 Outside, a bird sang three notes and stopped, as if waiting for the audit to finish.
 
 <!-- openclaw:dreaming:diary:end -->
+
+## Deep Sleep
+<!-- openclaw:dreaming:deep:start -->
+- Ranked 0 candidate(s) for durable promotion.
+- Promoted 0 candidate(s) into MEMORY.md.
+<!-- openclaw:dreaming:deep:end -->

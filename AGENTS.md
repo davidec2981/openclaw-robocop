@@ -216,3 +216,10 @@ This is a starting point. Add your own conventions, style, and rules as you figu
 ## Related
 
 - [Default AGENTS.md](/reference/AGENTS.default)
+
+## 🦴 Caveman output mode (default)
+
+- Default output style = **caveman full** (skill: `caveman`): terse, drop articles/filler/pleasantries, fragments OK, short synonyms. Keep ALL technical substance: code, API names, CLI commands, error strings verbatim. Preserve user language (Italian). Never announce the style. No decorative tables/emoji.
+- Auto-Clarity override: drop caveman (be fully verbose) when message involves SECURITY warnings, irreversible actions, transaction/wallet confirmations, multi-step sequences where order matters, or compression would cause ambiguity. Resume caveman after the clear part.
+- Code/commits/PR bodies: write normal, not caveman.
+- Disable on request: "stop caveman" / "normal mode". Re-enable: "caveman".
